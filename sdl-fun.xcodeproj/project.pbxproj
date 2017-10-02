@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A709ECE71F829CF1002C3027 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A709ECE51F829CF1002C3027 /* texture.cpp */; };
+		A709ECEA1F82A4DD002C3027 /* window_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A709ECE81F82A4DD002C3027 /* window_context.cpp */; };
 		A7DE42DE1F82443E009621E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DE42DD1F82443E009621E9 /* main.cpp */; };
 		A7DE42E61F8244D4009621E9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DE42E51F8244D4009621E9 /* SDL2.framework */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		A709ECE51F829CF1002C3027 /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
 		A709ECE61F829CF1002C3027 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
+		A709ECE81F82A4DD002C3027 /* window_context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window_context.cpp; sourceTree = "<group>"; };
+		A709ECE91F82A4DD002C3027 /* window_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window_context.h; sourceTree = "<group>"; };
 		A7DE42DA1F82443E009621E9 /* sdl-fun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdl-fun"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DE42DD1F82443E009621E9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7DE42E51F8244D4009621E9 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 		A7DE42DC1F82443E009621E9 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A709ECE81F82A4DD002C3027 /* window_context.cpp */,
+				A709ECE91F82A4DD002C3027 /* window_context.h */,
 				A7DE42DD1F82443E009621E9 /* main.cpp */,
 				A709ECE51F829CF1002C3027 /* texture.cpp */,
 				A709ECE61F829CF1002C3027 /* texture.h */,
@@ -137,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7DE42DE1F82443E009621E9 /* main.cpp in Sources */,
+				A709ECEA1F82A4DD002C3027 /* window_context.cpp in Sources */,
 				A709ECE71F829CF1002C3027 /* texture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
