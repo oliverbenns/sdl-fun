@@ -4,27 +4,15 @@ and may not be redistributed without written permission.*/
 //Using SDL and standard IO
 #include <SDL2/SDL.h>
 #include <stdio.h>
-#include <string>
-// #include "texture.h"
 #include "window_context.h"
 #include "game_object.h"
-
-//Screen dimension constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
 
 bool init();
 bool loadMedia();
 void close();
 
 WindowContext context;
-// SDL_Texture* buttonTexture;
-// SDL_Rect srcR;
-// SDL_Rect destR;
-
 GameObject button;
-
-
 
 bool init() {
   // Initialization flag
@@ -46,14 +34,6 @@ bool loadMedia() {
   bool success = true;
 
   createGameObject(&button, context.renderer, "button.bmp");
-
-  //Load default surface
-  // buttonTexture = loadTexture(context.renderer, "button.bmp");
-
-  // if (buttonTexture == NULL) {
-  //   printf( "Failed to load button image!\n" );
-  //   success = false;
-  // }
 
   return success;
 }
@@ -87,24 +67,10 @@ int main(int argc, char* args[]) {
           }
         }
 
-        // int w;
-        // int h;
-
-        // SDL_QueryTexture(buttonTexture, NULL, NULL, &w, &h);
-
-        // destR.h = h;
-        // destR.w = w;
-
         //Clear screen
         SDL_RenderClear(context.renderer);
 
-
         renderGameObject(&button);
-
-        //Render texture to screen
-        // SDL_RenderCopy(context.renderer, buttonTexture, NULL, &destR);
-
-        // SDL_RenderCopy(button.renderer, button.texture, NULL, &button.rect);
 
         //Update screen
         SDL_RenderPresent(context.renderer);
