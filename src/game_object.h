@@ -7,7 +7,7 @@ struct GameObject {
   SDL_Renderer* renderer;
 };
 
-bool createGameObject(GameObject* gameObject, SDL_Renderer* renderer, const char* texturePath);
+GameObject createGameObject(SDL_Renderer* renderer, const char* texturePath);
 
 // bool updateGameObject(GameObject gameObject);
 

@@ -6,13 +6,14 @@ and may not be redistributed without written permission.*/
 #include <stdio.h>
 #include "window_context.h"
 #include "game_object.h"
+#include "ui/button.h"
 
 bool init();
 bool loadMedia();
 void close();
 
 WindowContext context;
-GameObject button;
+Button button;
 
 bool init() {
   // Initialization flag
@@ -33,7 +34,7 @@ bool loadMedia() {
   // Loading success flag
   bool success = true;
 
-  createGameObject(&button, context.renderer, "button.bmp");
+  button = createButton(context.renderer);
 
   return success;
 }
@@ -70,7 +71,7 @@ int main(int argc, char* args[]) {
         //Clear screen
         SDL_RenderClear(context.renderer);
 
-        renderGameObject(&button);
+        renderGameObject(&button.gameObject);
 
         //Update screen
         SDL_RenderPresent(context.renderer);
