@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A709ECE71F829CF1002C3027 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A709ECE51F829CF1002C3027 /* texture.cpp */; };
 		A72D9D591F85339A00B9EB5D /* game_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A72D9D571F85339A00B9EB5D /* game_object.cpp */; };
+		A74FDDB71F868D730025AFCF /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */; };
 		A7DDD1F11F8654D500D1DEFF /* button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DDD1EF1F8654D500D1DEFF /* button.cpp */; };
 		A7DDD1F41F866EE600D1DEFF /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DDD1F21F866EE600D1DEFF /* window.cpp */; };
 		A7DE42DE1F82443E009621E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DE42DD1F82443E009621E9 /* main.cpp */; };
@@ -32,6 +33,7 @@
 		A709ECE61F829CF1002C3027 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
 		A72D9D571F85339A00B9EB5D /* game_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game_object.cpp; sourceTree = "<group>"; };
 		A72D9D581F85339A00B9EB5D /* game_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game_object.h; sourceTree = "<group>"; };
+		A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		A7DDD1EF1F8654D500D1DEFF /* button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = button.cpp; sourceTree = "<group>"; };
 		A7DDD1F01F8654D500D1DEFF /* button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = button.h; sourceTree = "<group>"; };
 		A7DDD1F21F866EE600D1DEFF /* window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74FDDB71F868D730025AFCF /* SDL2_ttf.framework in Frameworks */,
 				A7DE42E61F8244D4009621E9 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +100,7 @@
 		A7DE42E41F8244D4009621E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */,
 				A7DE42E51F8244D4009621E9 /* SDL2.framework */,
 			);
 			name = Frameworks;
