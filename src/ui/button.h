@@ -1,5 +1,5 @@
-#ifndef BUTTON_H
-#define BUTTON_H
+#pragma once
+
 #include <SDL2/SDL.h>
 #include "../game_object.h"
 
@@ -8,5 +8,3 @@ struct Button {
 };
 
 Button createButton(SDL_Renderer* renderer);
-
-#endif
