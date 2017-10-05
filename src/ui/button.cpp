@@ -2,9 +2,10 @@
 #include "game_object.h"
 #include "button.h"
 
-Button createButton(SDL_Renderer* renderer) {
-  Button button;
-  button.gameObject = createGameObject(renderer, "button.bmp");
-  // button.label = label;
-  return button;
-};
+Button::Button(SDL_Renderer *renderer, const char* label) : GameObject(renderer, "button.bmp") {
+  this->label = label;
+}
+
+void Button::update() {
+  rect.y++;
+}

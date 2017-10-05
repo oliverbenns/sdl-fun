@@ -8,10 +8,12 @@ class GameObject {
     void update();
     void render();
 
+  protected:
+    SDL_Rect rect;
+
   private:
     int x;
     int y;
     SDL_Texture* texture;
-    SDL_Rect rect;
     SDL_Renderer* renderer;
 };

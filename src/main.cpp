@@ -4,16 +4,15 @@ and may not be redistributed without written permission.*/
 //Using SDL and standard IO
 #include <SDL2/SDL.h>
 #include <stdio.h>
-#include "game_object.h"
 #include "window.h"
-// #include "ui/button.h"
+#include "ui/button.h"
 
 bool init();
 bool loadMedia();
 void close();
 
 // @TODO Why do I have to make this a pointer?
-GameObject* button;
+Button* button;
 Window* window;
 
 bool init() {
@@ -35,7 +34,7 @@ bool loadMedia() {
   // Loading success flag
   bool success = true;
 
-  button = new GameObject(window->renderer, "button.bmp");
+  button = new Button(window->renderer, "Start Game");
 
   return success;
 }
@@ -66,6 +65,9 @@ int main(int argc, char* args[]) {
 
         // Clear screen
         SDL_RenderClear(window->renderer);
+
+        // button->update();
+        // button->render();
 
         button->update();
         button->render();
