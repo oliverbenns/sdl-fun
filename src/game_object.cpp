@@ -15,7 +15,6 @@ GameObject::GameObject(SDL_Renderer* ren, const char * texturePath) {
 }
 
 void GameObject::update() {
-
   rect.x++;
   rect.y++;
 }

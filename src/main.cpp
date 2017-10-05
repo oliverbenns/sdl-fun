@@ -4,17 +4,17 @@ and may not be redistributed without written permission.*/
 //Using SDL and standard IO
 #include <SDL2/SDL.h>
 #include <stdio.h>
-#include "window_context.h"
 #include "game_object.h"
+#include "window.h"
 // #include "ui/button.h"
 
 bool init();
 bool loadMedia();
 void close();
 
-WindowContext context;
 // @TODO Why do I have to make this a pointer?
 GameObject* button;
+Window* window;
 
 bool init() {
   // Initialization flag
@@ -25,7 +25,7 @@ bool init() {
     printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
     success = false;
   } else {
-    createWindowContext(&context, 800, 600);
+    window = new Window(800, 600);
   }
 
   return success;
@@ -35,14 +35,9 @@ bool loadMedia() {
   // Loading success flag
   bool success = true;
 
-  button = new GameObject(context.renderer, "button.bmp");
+  button = new GameObject(window->renderer, "button.bmp");
 
   return success;
-}
-
-void close() {
-  destroyWindowContext(&context);
-  SDL_Quit();
 }
 
 int main(int argc, char* args[]) {
@@ -69,21 +64,21 @@ int main(int argc, char* args[]) {
           }
         }
 
-        //Clear screen
-        SDL_RenderClear(context.renderer);
+        // Clear screen
+        SDL_RenderClear(window->renderer);
 
         button->update();
-
         button->render();
 
-        //Update screen
-        SDL_RenderPresent(context.renderer);
+        // Update screen
+        SDL_RenderPresent(window->renderer);
       }
     }
   }
 
-  //Free resources and close SDL
-  close();
+  // Free resources and close SDL
+  window->close();
+  SDL_Quit();
 
   return 0;
 }
