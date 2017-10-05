@@ -3,7 +3,7 @@
 class Window {
   public:
     Window(int width, int height);
-    // virtual ~Window();
+    virtual ~Window();
     void close();
 
     SDL_Window* window;

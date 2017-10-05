@@ -76,8 +76,9 @@ int main(int argc, char* args[]) {
     }
   }
 
+
   // Free resources and close SDL
-  window->close();
+  delete window;
   SDL_Quit();
 
   return 0;

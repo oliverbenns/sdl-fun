@@ -16,8 +16,7 @@ Window::Window(int width, int height) {
   SDL_SetRenderDrawColor(this->renderer, 255, 96, 248, 255);
 }
 
-// Can this be a destructor?
-void Window::close() {
+Window::~Window() {
   SDL_DestroyRenderer(renderer);
   SDL_DestroyWindow(window);
 
