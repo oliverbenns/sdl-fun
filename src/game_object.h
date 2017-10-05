@@ -1,13 +1,17 @@
 #pragma once
 
-struct GameObject {
-  SDL_Texture* texture;
-  SDL_Rect rect;
-  SDL_Renderer* renderer;
+class GameObject {
+  public:
+    GameObject(SDL_Renderer* renderer, const char * textureSheet);
+    // ~GameObject;
+
+    void update();
+    void render();
+
+  private:
+    int x;
+    int y;
+    SDL_Texture* texture;
+    SDL_Rect rect;
+    SDL_Renderer* renderer;
 };
-
-GameObject createGameObject(SDL_Renderer* renderer, const char* texturePath);
-
-// bool updateGameObject(GameObject gameObject);
-
-bool renderGameObject(GameObject* gameObject);

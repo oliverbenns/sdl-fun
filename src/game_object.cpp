@@ -2,28 +2,24 @@
 #include "texture.h"
 #include "game_object.h"
 
-GameObject createGameObject(SDL_Renderer* renderer, const char* texturePath) {
-  GameObject gameObject;
-
-  gameObject.renderer = renderer;
-
-  // @TODO: Error handle.
-  gameObject.texture = loadTexture(gameObject.renderer, texturePath);
+GameObject::GameObject(SDL_Renderer* ren, const char * texturePath) {
+  renderer = ren;
+  texture = loadTexture(ren, texturePath);
 
   // Set rewidth and height to the same dimensions as the texture
-  SDL_QueryTexture(gameObject.texture, NULL, NULL, &gameObject.rect.w, &gameObject.rect.h);
+  SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
 
   // This seems safer as sometimes it appears we get random vals
-  gameObject.rect.x = 100;
-  gameObject.rect.y = 0;
-
-  return gameObject;
+  rect.x = 0;
+  rect.y = 0;
 }
 
-// bool updateGameObject(GameObject gameObject);
+void GameObject::update() {
 
-bool renderGameObject(GameObject* gameObject) {
-  SDL_RenderCopy(gameObject->renderer, gameObject->texture, NULL, &gameObject->rect);
+  rect.x++;
+  rect.y++;
+}
 
-  return true;
-};
+void GameObject::render() {
+  SDL_RenderCopy(renderer, texture, NULL, &rect);
+}

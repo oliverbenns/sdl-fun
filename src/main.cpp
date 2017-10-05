@@ -6,14 +6,15 @@ and may not be redistributed without written permission.*/
 #include <stdio.h>
 #include "window_context.h"
 #include "game_object.h"
-#include "ui/button.h"
+// #include "ui/button.h"
 
 bool init();
 bool loadMedia();
 void close();
 
 WindowContext context;
-Button button;
+// @TODO Why do I have to make this a pointer?
+GameObject* button;
 
 bool init() {
   // Initialization flag
@@ -34,7 +35,7 @@ bool loadMedia() {
   // Loading success flag
   bool success = true;
 
-  button = createButton(context.renderer);
+  button = new GameObject(context.renderer, "button.bmp");
 
   return success;
 }
@@ -71,7 +72,9 @@ int main(int argc, char* args[]) {
         //Clear screen
         SDL_RenderClear(context.renderer);
 
-        renderGameObject(&button.gameObject);
+        button->update();
+
+        button->render();
 
         //Update screen
         SDL_RenderPresent(context.renderer);
