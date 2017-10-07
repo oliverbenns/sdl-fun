@@ -7,13 +7,8 @@ and may not be redistributed without written permission.*/
 #include <stdio.h>
 #include "window.h"
 #include "ui/button.h"
+#include "entities/player.h"
 
-bool init();
-bool loadMedia();
-void close();
-
-// @TODO Why do I have to make this a pointer?
-Button* button;
 Window* window;
 
 bool init() {
@@ -24,18 +19,17 @@ bool init() {
   if(SDL_Init( SDL_INIT_VIDEO ) < 0) {
     printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
     success = false;
-  } else {
-    window = new Window(800, 600);
   }
 
-  return success;
-}
+  // Initialize SDL_ttf
+  if(TTF_Init() == -1) {
+    printf( "SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError() );
+    success = false;
+  }
 
-bool loadMedia() {
-  // Loading success flag
-  bool success = true;
-
-  button = new Button(window->renderer, "Start Game");
+  if (success) {
+    window = new Window(800, 600);
+  }
 
   return success;
 }
@@ -44,41 +38,35 @@ int main(int argc, char* args[]) {
   // Start up SDL and create window
   if(!init()) {
     printf( "Failed to initialize!\n" );
-  } else {
-    // Load media
-    if(!loadMedia()) {
-      printf( "Failed to load media!\n" );
-    } else {
-      // Main loop flag
-      bool quit = false;
-
-      // Event handler
-      SDL_Event e;
-
-      while(!quit) {
-        // Handle events on queue
-        while( SDL_PollEvent(&e) != 0 ) {
-          //User requests quit
-          if (e.type == SDL_QUIT) {
-            quit = true;
-          }
-        }
-
-        // Clear screen
-        SDL_RenderClear(window->renderer);
-
-        // button->update();
-        // button->render();
-
-        button->update();
-        button->render();
-
-        // Update screen
-        SDL_RenderPresent(window->renderer);
-      }
-    }
+    return -1;
   }
 
+  Player* player = new Player(window->renderer);
+
+  // Main loop flag
+  bool quit = false;
+
+  // Event handler
+  SDL_Event e;
+
+  while(!quit) {
+    // Handle events on queue
+    while( SDL_PollEvent(&e) != 0 ) {
+      //User requests quit
+      if (e.type == SDL_QUIT) {
+        quit = true;
+      }
+    }
+
+    // Clear screen
+    SDL_RenderClear(window->renderer);
+
+    player->update();
+    player->render(window->renderer);
+
+    // Update screen
+    SDL_RenderPresent(window->renderer);
+  }
 
   // Free resources and close SDL
   delete window;
