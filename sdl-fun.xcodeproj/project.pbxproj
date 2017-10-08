@@ -12,6 +12,7 @@
 		A7B0D5761F892E33000EC425 /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5711F892E33000EC425 /* sprite.cpp */; };
 		A7B0D5771F892E33000EC425 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5741F892E33000EC425 /* player.cpp */; };
 		A7B0D57A1F8946E3000EC425 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5781F8946E3000EC425 /* input.cpp */; };
+		A7B0D57E1F8AC8BA000EC425 /* delta_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */; };
 		A7DDD1F41F866EE600D1DEFF /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DDD1F21F866EE600D1DEFF /* window.cpp */; };
 		A7DE42DE1F82443E009621E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DE42DD1F82443E009621E9 /* main.cpp */; };
 		A7DE42E61F8244D4009621E9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DE42E51F8244D4009621E9 /* SDL2.framework */; };
@@ -41,6 +42,8 @@
 		A7B0D5781F8946E3000EC425 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
 		A7B0D5791F8946E3000EC425 /* input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
 		A7B0D57B1F8AB0C4000EC425 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = delta_time.cpp; sourceTree = "<group>"; };
+		A7B0D57D1F8AC8BA000EC425 /* delta_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delta_time.h; sourceTree = "<group>"; };
 		A7DDD1F21F866EE600D1DEFF /* window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = "<group>"; };
 		A7DDD1F31F866EE600D1DEFF /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
 		A7DE42DA1F82443E009621E9 /* sdl-fun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdl-fun"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +108,8 @@
 				A7B0D5731F892E33000EC425 /* entities */,
 				A74FDDCE1F8919820025AFCF /* entity.h */,
 				A7DE42DD1F82443E009621E9 /* main.cpp */,
+				A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */,
+				A7B0D57D1F8AC8BA000EC425 /* delta_time.h */,
 				A709ECE51F829CF1002C3027 /* texture.cpp */,
 				A709ECE61F829CF1002C3027 /* texture.h */,
 				A7B0D57B1F8AB0C4000EC425 /* vector.h */,
@@ -186,6 +191,7 @@
 				A7DDD1F41F866EE600D1DEFF /* window.cpp in Sources */,
 				A709ECE71F829CF1002C3027 /* texture.cpp in Sources */,
 				A7B0D5771F892E33000EC425 /* player.cpp in Sources */,
+				A7B0D57E1F8AC8BA000EC425 /* delta_time.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

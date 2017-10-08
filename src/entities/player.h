@@ -7,7 +7,7 @@
 
 struct Player : Entity {
   Player(SDL_Renderer* renderer);
-  void update();
+  void update(double deltaTime);
   void render(SDL_Renderer* renderer);
 
   Input input;

@@ -7,6 +7,7 @@ and may not be redistributed without written permission.*/
 #include <stdio.h>
 #include "window.h"
 #include "entities/player.h"
+#include "delta_time.h"
 
 Window* window;
 
@@ -48,6 +49,8 @@ int main(int argc, char* args[]) {
   // Event handler
   SDL_Event e;
 
+  DeltaTime deltaTime;
+
   while(!quit) {
     // Handle events on queue
     while( SDL_PollEvent(&e) != 0 ) {
@@ -57,10 +60,14 @@ int main(int argc, char* args[]) {
       }
     }
 
+    deltaTime.update();
+
+    printf("deltaTime %f\n", deltaTime.now);
+
     // Clear screen
     SDL_RenderClear(window->renderer);
 
-    player->update();
+    player->update(deltaTime.now);
     player->render(window->renderer);
 
     // Update screen

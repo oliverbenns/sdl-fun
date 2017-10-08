@@ -2,10 +2,11 @@
 
 Player::Player(SDL_Renderer* renderer) : sprite(renderer, "player.bmp") {}
 
-void Player::update() {
+void Player::update(double deltaTime) {
+  x = x + deltaTime;
+
+  // !! This should come after position changes.
   sprite.update(*this);
-  input.update(*this);
-  x++;
 }
 
 void Player::render(SDL_Renderer* renderer) {
