@@ -4,6 +4,7 @@ Player::Player(SDL_Renderer* renderer) : sprite(renderer, "player.bmp") {}
 
 void Player::update() {
   sprite.update(*this);
+  input.update(*this);
   x++;
 }
 
