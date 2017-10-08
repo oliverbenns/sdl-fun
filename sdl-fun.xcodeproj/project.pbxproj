@@ -40,6 +40,7 @@
 		A7B0D5751F892E33000EC425 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
 		A7B0D5781F8946E3000EC425 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
 		A7B0D5791F8946E3000EC425 /* input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
+		A7B0D57B1F8AB0C4000EC425 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 		A7DDD1F21F866EE600D1DEFF /* window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = "<group>"; };
 		A7DDD1F31F866EE600D1DEFF /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
 		A7DE42DA1F82443E009621E9 /* sdl-fun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdl-fun"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +107,7 @@
 				A7DE42DD1F82443E009621E9 /* main.cpp */,
 				A709ECE51F829CF1002C3027 /* texture.cpp */,
 				A709ECE61F829CF1002C3027 /* texture.h */,
+				A7B0D57B1F8AB0C4000EC425 /* vector.h */,
 				A7DDD1F21F866EE600D1DEFF /* window.cpp */,
 				A7DDD1F31F866EE600D1DEFF /* window.h */,
 			);
