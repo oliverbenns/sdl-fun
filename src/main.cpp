@@ -6,7 +6,6 @@ and may not be redistributed without written permission.*/
 #include <SDL2_ttf/SDL_ttf.h>
 #include <stdio.h>
 #include "window.h"
-#include "ui/button.h"
 #include "entities/player.h"
 
 Window* window;
