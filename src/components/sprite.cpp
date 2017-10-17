@@ -1,4 +1,3 @@
-#include "player.h"
 #include "sprite.h"
 
 Sprite::Sprite(SDL_Renderer* renderer, const char * texturePath) {
@@ -12,16 +11,16 @@ Sprite::Sprite(SDL_Renderer* renderer, const char * texturePath) {
  rect.y = 0;
 }
 
-void Sprite::update(Player& player) {
+void Sprite::update(Entity& entity) {
   // @TODO could I make this reference it instead of reassign each frame?
-  rect.x = player.x;
-  rect.y = player.y;
+
+  rect.x = entity.x;
+  rect.y = entity.y;
 };
 
-
 // @TODO maybe this should go on the entity instead.
-void Sprite::render(Player& player, SDL_Renderer* renderer) {
-  SDL_RenderCopy(renderer, player.sprite.texture, NULL, &rect);
+void Sprite::render(Entity& entity, SDL_Renderer* renderer) {
+  SDL_RenderCopy(renderer, entity.sprite->texture, NULL, &rect);
 }
 
 // @TODO Destruct and free texture.

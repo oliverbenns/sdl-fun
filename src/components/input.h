@@ -3,11 +3,11 @@
 #include <SDL2/SDL.h>
 #include "texture.h"
 
-struct Player; // Forward declaration due to circular dependency issue. We can remove this when it becomes a generic Entity.
+struct Entity; // Forward declaration due to circular dependency issue. We can remove this when it becomes a generic Entity.
 
 struct Input {
   Input();
-  void update(Player& player, double deltaTime);
+  void update(Entity& entity, double deltaTime);
 
   // Can we make these bools?
   const Uint8* up;

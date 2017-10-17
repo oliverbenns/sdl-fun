@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A709ECE71F829CF1002C3027 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A709ECE51F829CF1002C3027 /* texture.cpp */; };
+		A742892A1F96558700F63576 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289291F96558700F63576 /* player.cpp */; };
+		A742892C1F965A1700F63576 /* entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742892B1F965A1700F63576 /* entity.cpp */; };
+		A742892F1F96614F00F63576 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742892E1F96614F00F63576 /* input.cpp */; };
 		A74FDDB71F868D730025AFCF /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */; };
 		A7B0D5761F892E33000EC425 /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5711F892E33000EC425 /* sprite.cpp */; };
-		A7B0D5771F892E33000EC425 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5741F892E33000EC425 /* player.cpp */; };
-		A7B0D57A1F8946E3000EC425 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5781F8946E3000EC425 /* input.cpp */; };
 		A7B0D57E1F8AC8BA000EC425 /* delta_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */; };
 		A7DDD1F41F866EE600D1DEFF /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DDD1F21F866EE600D1DEFF /* window.cpp */; };
 		A7DE42DE1F82443E009621E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DE42DD1F82443E009621E9 /* main.cpp */; };
@@ -33,14 +34,15 @@
 /* Begin PBXFileReference section */
 		A709ECE51F829CF1002C3027 /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
 		A709ECE61F829CF1002C3027 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
+		A74289281F96558700F63576 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
+		A74289291F96558700F63576 /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		A742892B1F965A1700F63576 /* entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = entity.cpp; sourceTree = "<group>"; };
+		A742892D1F96614F00F63576 /* input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
+		A742892E1F96614F00F63576 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
 		A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		A74FDDCE1F8919820025AFCF /* entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entity.h; sourceTree = "<group>"; };
 		A7B0D5711F892E33000EC425 /* sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sprite.cpp; sourceTree = "<group>"; };
 		A7B0D5721F892E33000EC425 /* sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sprite.h; sourceTree = "<group>"; };
-		A7B0D5741F892E33000EC425 /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
-		A7B0D5751F892E33000EC425 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
-		A7B0D5781F8946E3000EC425 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
-		A7B0D5791F8946E3000EC425 /* input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
 		A7B0D57B1F8AB0C4000EC425 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 		A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = delta_time.cpp; sourceTree = "<group>"; };
 		A7B0D57D1F8AC8BA000EC425 /* delta_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delta_time.h; sourceTree = "<group>"; };
@@ -67,19 +69,19 @@
 		A7B0D5701F892E33000EC425 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				A7B0D5781F8946E3000EC425 /* input.cpp */,
-				A7B0D5791F8946E3000EC425 /* input.h */,
+				A742892E1F96614F00F63576 /* input.cpp */,
+				A742892D1F96614F00F63576 /* input.h */,
 				A7B0D5711F892E33000EC425 /* sprite.cpp */,
 				A7B0D5721F892E33000EC425 /* sprite.h */,
 			);
 			path = components;
 			sourceTree = "<group>";
 		};
-		A7B0D5731F892E33000EC425 /* entities */ = {
+		A7BA963F1F951C0C00CA2265 /* entities */ = {
 			isa = PBXGroup;
 			children = (
-				A7B0D5741F892E33000EC425 /* player.cpp */,
-				A7B0D5751F892E33000EC425 /* player.h */,
+				A74289291F96558700F63576 /* player.cpp */,
+				A74289281F96558700F63576 /* player.h */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -105,8 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				A7B0D5701F892E33000EC425 /* components */,
-				A7B0D5731F892E33000EC425 /* entities */,
+				A7BA963F1F951C0C00CA2265 /* entities */,
 				A74FDDCE1F8919820025AFCF /* entity.h */,
+				A742892B1F965A1700F63576 /* entity.cpp */,
 				A7DE42DD1F82443E009621E9 /* main.cpp */,
 				A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */,
 				A7B0D57D1F8AC8BA000EC425 /* delta_time.h */,
@@ -154,7 +157,7 @@
 		A7DE42D21F82443E009621E9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Oliver;
 				TargetAttributes = {
 					A7DE42D91F82443E009621E9 = {
@@ -185,12 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B0D57A1F8946E3000EC425 /* input.cpp in Sources */,
+				A742892C1F965A1700F63576 /* entity.cpp in Sources */,
 				A7B0D5761F892E33000EC425 /* sprite.cpp in Sources */,
+				A742892F1F96614F00F63576 /* input.cpp in Sources */,
 				A7DE42DE1F82443E009621E9 /* main.cpp in Sources */,
+				A742892A1F96558700F63576 /* player.cpp in Sources */,
 				A7DDD1F41F866EE600D1DEFF /* window.cpp in Sources */,
 				A709ECE71F829CF1002C3027 /* texture.cpp in Sources */,
-				A7B0D5771F892E33000EC425 /* player.cpp in Sources */,
 				A7B0D57E1F8AC8BA000EC425 /* delta_time.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +212,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -216,7 +222,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -256,7 +266,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -264,7 +276,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

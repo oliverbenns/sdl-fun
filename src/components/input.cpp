@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "player.h"
+#include "entity.h"
 #include "input.h"
 
 Input::Input() {
@@ -10,12 +10,23 @@ Input::Input() {
   left = &state[SDL_SCANCODE_LEFT];
   right = &state[SDL_SCANCODE_RIGHT];
 }
+
 // @TODO: This is obviously specific right now. How can I make this more general? If possible?
-void Input::update(Player& player, double deltaTime) {
-  // printf("\n| up: %u", *up);
-  // printf("| down: %u", *down);
-  // printf("| left: %u", *left);
-  // printf("| right: %u\n", *right);
-  // @TODO: This is going by deltaTime! This is bad as we could miss inputs or it's not seamless. To fix this do we need to run as seperate process/thread with SDL_PollEvent.
+void Input::update(Entity& entity, double deltaTime) {
+  if (*up != 0) {
+    entity.y -= deltaTime;
+  }
+
+  if (*down) {
+    entity.y += deltaTime;
+  }
+
+  if (*left) {
+    entity.x -= deltaTime;
+  }
+
+  if (*right) {
+    entity.x += deltaTime;
+  }
 };
 

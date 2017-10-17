@@ -2,8 +2,9 @@
 #include <SDL2_ttf/SDL_ttf.h>
 #include <stdio.h>
 #include "window.h"
-#include "entities/player.h"
 #include "delta_time.h"
+#include "entity.h"
+#include "player.h"
 
 Window* window;
 
@@ -37,7 +38,7 @@ int main(int argc, char* args[]) {
     return -1;
   }
 
-  Player* player = new Player(window->renderer);
+  Entity* player = createPlayer(window->renderer);
 
   // Main loop flag
   bool quit = false;
