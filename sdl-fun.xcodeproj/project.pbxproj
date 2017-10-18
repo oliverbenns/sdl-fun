@@ -11,6 +11,7 @@
 		A742892A1F96558700F63576 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289291F96558700F63576 /* player.cpp */; };
 		A742892C1F965A1700F63576 /* entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742892B1F965A1700F63576 /* entity.cpp */; };
 		A742892F1F96614F00F63576 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742892E1F96614F00F63576 /* input.cpp */; };
+		A74289321F97685000F63576 /* body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289301F97684F00F63576 /* body.cpp */; };
 		A74FDDB71F868D730025AFCF /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */; };
 		A7B0D5761F892E33000EC425 /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5711F892E33000EC425 /* sprite.cpp */; };
 		A7B0D57E1F8AC8BA000EC425 /* delta_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */; };
@@ -39,6 +40,8 @@
 		A742892B1F965A1700F63576 /* entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = entity.cpp; sourceTree = "<group>"; };
 		A742892D1F96614F00F63576 /* input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
 		A742892E1F96614F00F63576 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
+		A74289301F97684F00F63576 /* body.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = body.cpp; sourceTree = "<group>"; };
+		A74289311F97685000F63576 /* body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = body.h; sourceTree = "<group>"; };
 		A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		A74FDDCE1F8919820025AFCF /* entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entity.h; sourceTree = "<group>"; };
 		A7B0D5711F892E33000EC425 /* sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sprite.cpp; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 		A7B0D5701F892E33000EC425 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				A74289301F97684F00F63576 /* body.cpp */,
+				A74289311F97685000F63576 /* body.h */,
 				A742892E1F96614F00F63576 /* input.cpp */,
 				A742892D1F96614F00F63576 /* input.h */,
 				A7B0D5711F892E33000EC425 /* sprite.cpp */,
@@ -190,6 +195,7 @@
 			files = (
 				A742892C1F965A1700F63576 /* entity.cpp in Sources */,
 				A7B0D5761F892E33000EC425 /* sprite.cpp in Sources */,
+				A74289321F97685000F63576 /* body.cpp in Sources */,
 				A742892F1F96614F00F63576 /* input.cpp in Sources */,
 				A7DE42DE1F82443E009621E9 /* main.cpp in Sources */,
 				A742892A1F96558700F63576 /* player.cpp in Sources */,

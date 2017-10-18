@@ -7,8 +7,8 @@ Sprite::Sprite(SDL_Renderer* renderer, const char * texturePath) {
  SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
 
  // This seems safer as sometimes it appears we get random vals
- rect.x = 0;
- rect.y = 0;
+ // rect.x = 0;
+ // rect.y = 0;
 }
 
 void Sprite::update(Entity& entity) {

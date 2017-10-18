@@ -2,8 +2,10 @@
 
 #include <SDL2/SDL.h>
 #include "entity.h"
+#include "body.h"
 #include "input.h"
 #include "sprite.h"
+
 
 struct Entity;
 

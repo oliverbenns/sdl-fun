@@ -1,14 +1,12 @@
 #include "entity.h"
 
-Entity::Entity(Sprite* sprite, Input* input) : sprite(sprite), input(input) {
+Entity::Entity(Sprite* sprite, Body* body, Input* input) : sprite(sprite), body(body), input(input) {
 
 }
 
 void Entity::update(double deltaTime) {
-  x = x + deltaTime * 0.1;
-
+  body->update(*this);
   input->update(*this, deltaTime);
-
   // !! This should come after position changes.
   sprite->update(*this);
 }
