@@ -5,7 +5,15 @@ Body::Body() {
   velocity.y = 1;
 };
 
-void Body::update(Entity& entity) {
-  entity.x += velocity.x;
-  entity.y += velocity.y;
+void Body::update() {
+  if (gravity) {
+    entity->x += velocity.x;
+    entity->y += velocity.y;
+  }
+
+  // bool isCollidingWithFloor =
 };
+
+bool Body::checkCollision() {
+  return true;
+}

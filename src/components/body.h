@@ -7,7 +7,11 @@ struct Entity; // Forward declaration due to circular dependency issue. We can r
 
 struct Body {
   Body();
-  void update(Entity& entity);
+  // void update(Entity& entity);
+  void update();
+  bool checkCollision();
 
+  bool gravity = true;
   Vector velocity;
+  Entity* entity;
 };

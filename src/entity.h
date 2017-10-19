@@ -22,6 +22,10 @@ struct Entity : Vector {
   char tag; // @TODO: Allow multiple?
   bool active;
 
+  // Could we make this a rect like SDL_RECT?
+  int width;
+  int height;
+
   Body* body;
   Input* input;
   Sprite* sprite;

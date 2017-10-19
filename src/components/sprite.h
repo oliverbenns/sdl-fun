@@ -8,9 +8,10 @@ struct Entity; // Forward declaration due to circular dependency issue. We can r
 
 struct Sprite {
   Sprite(SDL_Renderer* renderer, const char * texturePath);
-  void update(Entity& entity);
-  void render(Entity& entity, SDL_Renderer* renderer);
+  void update();
+  void render(SDL_Renderer* renderer);
 
+  Entity* entity;
   SDL_Rect rect;
   SDL_Texture* texture;
 };

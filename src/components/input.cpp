@@ -12,21 +12,21 @@ Input::Input() {
 }
 
 // @TODO: This is obviously specific right now. How can I make this more general? If possible?
-void Input::update(Entity& entity, double deltaTime) {
+void Input::update(double deltaTime) {
   if (*up) {
-    entity.y -= deltaTime;
+      entity->y -= deltaTime;
   }
 
   if (*down) {
-    entity.y += deltaTime;
+      entity->y += deltaTime;
   }
 
   if (*left) {
-    entity.x -= deltaTime;
+      entity->x -= deltaTime;
   }
 
   if (*right) {
-    entity.x += deltaTime;
+      entity->x += deltaTime;
   }
 };
 

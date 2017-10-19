@@ -4,7 +4,7 @@
 #include "window.h"
 #include "delta_time.h"
 #include "entity.h"
-#include "player.h"
+#include "entities.h"
 
 Window* window;
 
@@ -38,7 +38,9 @@ int main(int argc, char* args[]) {
     return -1;
   }
 
-  Entity* player = createPlayer(window->renderer);
+  Entity* entities[2];
+  entities[0] = createPlayer(window->renderer);
+  entities[1] = createFloor(window->renderer);
 
   // Main loop flag
   bool quit = false;
@@ -64,8 +66,17 @@ int main(int argc, char* args[]) {
     // Clear screen
     SDL_RenderClear(window->renderer);
 
-    player->update(deltaTime.now);
-    player->render(window->renderer);
+
+
+    // Size of array. Although it's a fixed array, it probably won't be in future so keeping this here. Probs make a util.
+    int entityCount = sizeof(entities) / sizeof(entities[0]);
+
+    for (unsigned int i = 0; i < entityCount; i++) {
+      Entity* entity = entities[i];
+
+      entity->update(deltaTime.now);
+      entity->render(window->renderer);
+    }
 
     // Update screen
     SDL_RenderPresent(window->renderer);

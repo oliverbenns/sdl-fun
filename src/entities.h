@@ -6,7 +6,8 @@
 #include "input.h"
 #include "sprite.h"
 
-
 struct Entity;
 
 Entity* createPlayer(SDL_Renderer* renderer);
+
+Entity* createFloor(SDL_Renderer* renderer);
