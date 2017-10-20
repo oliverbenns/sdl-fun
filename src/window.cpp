@@ -2,15 +2,12 @@
 #include <stdio.h>
 #include "window.h"
 
-Window::Window(int width, int height) {
+Window::Window(int width, int height) : width(width), height(height) {
   int result = SDL_CreateWindowAndRenderer(width, height, NULL, &this->window, &this->renderer);
 
   if (result < 0) {
     printf("WindowContext could not be created! SDL_Error: %s\n", SDL_GetError());
   }
-
-  this->width = width;
-  this->height = height;
 
   // @TODO: Error handle this.
   SDL_SetRenderDrawColor(this->renderer, 255, 96, 248, 255);
