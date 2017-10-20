@@ -3,10 +3,11 @@
 #include <SDL2/SDL.h>
 #include "entity.h"
 #include "texture.h"
+#include "component.h"
 
 struct Entity; // Forward declaration due to circular dependency issue. We can remove this when it becomes a generic Entity.
 
-struct Input {
+struct Input : Component {
   Input();
   void update(double deltaTime);
 
