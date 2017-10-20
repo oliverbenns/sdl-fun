@@ -1,8 +1,8 @@
 #include "entity.h"
 
-Entity::Entity(Sprite* sprite, Body* body, Input* input) : sprite(sprite), body(body), input(input) {
-  height = sprite->rect.h;
-  width = sprite->rect.w;
+Entity::Entity() {
+  // height = sprite->rect.h;
+  // width = sprite->rect.w;
 }
 
 void Entity::update(double deltaTime) {
@@ -15,6 +15,21 @@ void Entity::update(double deltaTime) {
   // !! This should come after position changes.
   sprite->update();
 }
+
+void Entity::addComponent(Body* body) {
+  body->entity = this;
+  this->body = body;
+};
+
+void Entity::addComponent(Input* input) {
+  input->entity = this;
+  this->input = input;
+};
+
+void Entity::addComponent(Sprite* sprite) {
+  sprite->entity = this;
+  this->sprite = sprite;
+};
 
 void Entity::render(SDL_Renderer* renderer) {
   sprite->render(renderer);

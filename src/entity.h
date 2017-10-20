@@ -5,18 +5,25 @@
 #include "input.h"
 #include "sprite.h"
 #include "vector.h"
+#include "component.h"
 
 struct Body;
 struct Input;
 struct Sprite;
 
 struct Entity : Vector {
-  Entity(Sprite* sprite, Body* body, Input* input);
+  Entity();
   // @TODO: Do I need to define virtual deconstructor?
 
   // @TODO: Store position on entity or a position/transform component? Or on Sprite?
   void update(double deltaTime);
   void render(SDL_Renderer* renderer);
+
+  // @TODO: Use template rather than overloading.
+  void addComponent(Body* body);
+  void addComponent(Input* input);
+  void addComponent(Sprite* sprite);
+
 
   unsigned int id;
   char tag; // @TODO: Allow multiple?
@@ -26,7 +33,7 @@ struct Entity : Vector {
   int width;
   int height;
 
-  Body* body;
-  Input* input;
-  Sprite* sprite;
+  Body* body = nullptr;
+  Input* input = nullptr;
+  Sprite* sprite = nullptr;
 };

@@ -3,28 +3,21 @@
 struct Entity;
 
 Entity* createPlayer(SDL_Renderer* renderer) {
+  Entity* entity = new Entity();
 
-  Entity* entity = new Entity(
-    new Sprite(renderer, "player.bmp"),
-    new Body(),
-    new Input()
-  );
-  entity->sprite->entity = entity;
-  entity->body->entity = entity;
-  entity->input->entity = entity;
+  entity->addComponent(new Body());
+  entity->addComponent(new Input());
+  entity->addComponent(new Sprite(renderer, "player.bmp"));
 
   return entity;
 }
 
 Entity* createFloor(SDL_Renderer* renderer) {
-  Entity* entity = new Entity(
-    new Sprite(renderer, "floor.bmp"),
-    new Body(),
-    nullptr
-  );
+  Entity* entity = new Entity();
 
-  entity->sprite->entity = entity;
-  entity->body->entity = entity;
+  entity->addComponent(new Body());
+  entity->addComponent(new Sprite(renderer, "floor.bmp"));
+
   entity->body->gravity = false;
   entity->x = 0;
   entity->y = 400;

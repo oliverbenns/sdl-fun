@@ -42,6 +42,7 @@ int main(int argc, char* args[]) {
   entities[0] = createPlayer(window->renderer);
   entities[1] = createFloor(window->renderer);
 
+
   // Main loop flag
   bool quit = false;
 
