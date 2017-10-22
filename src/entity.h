@@ -1,9 +1,9 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-// #include "body.h"
-// #include "input.h"
-// #include "sprite.h"
+#include "body.h"
+#include "input.h"
+#include "sprite.h"
 #include "vector.h"
 
 struct Body;
