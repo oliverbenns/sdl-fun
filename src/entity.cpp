@@ -16,7 +16,7 @@ void Entity::update(double deltaTime) {
   sprite->update();
 }
 
-void Entity::addComponent(Body* body) {
+void Entity::addComponentTest(Body* body) {
   body->entity = this;
   this->body = body;
 };

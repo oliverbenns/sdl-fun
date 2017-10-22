@@ -5,7 +5,7 @@ struct Entity;
 Entity* createPlayer(SDL_Renderer* renderer) {
   Entity* entity = new Entity();
 
-  entity->addComponent(new Body());
+  entity->addComponentTest(new Body());
   entity->addComponent(new Input());
   entity->addComponent(new Sprite(renderer, "player.bmp"));
 
@@ -15,7 +15,7 @@ Entity* createPlayer(SDL_Renderer* renderer) {
 Entity* createFloor(SDL_Renderer* renderer) {
   Entity* entity = new Entity();
 
-  entity->addComponent(new Body());
+  entity->addComponentTest(new Body());
   entity->addComponent(new Sprite(renderer, "floor.bmp"));
 
   entity->body->gravity = false;

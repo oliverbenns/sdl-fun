@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include "entity.h"
 #include "input.h"
 
 Input::Input() {

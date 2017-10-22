@@ -1,11 +1,10 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-#include "body.h"
-#include "input.h"
-#include "sprite.h"
+// #include "body.h"
+// #include "input.h"
+// #include "sprite.h"
 #include "vector.h"
-#include "component.h"
 
 struct Body;
 struct Input;
@@ -20,7 +19,7 @@ struct Entity : Vector {
   void render(SDL_Renderer* renderer);
 
   // @TODO: Use template rather than overloading.
-  void addComponent(Body* body);
+  void addComponentTest(Body* body);
   void addComponent(Input* input);
   void addComponent(Sprite* sprite);
 
