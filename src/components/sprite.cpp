@@ -14,8 +14,8 @@ Sprite::Sprite(SDL_Renderer* renderer, const char * texturePath) {
 void Sprite::update() {
   // @TODO could I make this reference it instead of reassign each frame?
 
-    rect.x = entity->x;
-    rect.y = entity->y;
+  rect.x = entity->x;
+  rect.y = entity->y;
 };
 
 // @TODO maybe this should go on the entity instead.
