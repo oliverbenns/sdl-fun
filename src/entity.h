@@ -20,8 +20,7 @@ struct Entity : Vector {
   void render(SDL_Renderer* renderer);
 
   // @TODO: Use template rather than overloading.
-  void addComponentTest(Body* body);
-
+  void addComponent(Body* body);
   void addComponent(Input* input);
   void addComponent(Sprite* sprite);
 
