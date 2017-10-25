@@ -5,15 +5,15 @@ Entity::Entity() {
   // width = sprite->rect.w;
 }
 
-void Entity::update(double deltaTime) {
-  body->update();
+void Entity::preUpdate(double deltaTime) {
+  body->update(deltaTime);
 
   if (input) {
     input->update(deltaTime);
   }
 
   // !! This should come after position changes.
-  sprite->update();
+  sprite->update(deltaTime);
 }
 
 void Entity::addComponentTest(Body* body) {

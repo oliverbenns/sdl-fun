@@ -11,8 +11,6 @@
 		A742892C1F965A1700F63576 /* entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742892B1F965A1700F63576 /* entity.cpp */; };
 		A742892F1F96614F00F63576 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742892E1F96614F00F63576 /* input.cpp */; };
 		A74289321F97685000F63576 /* body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289301F97684F00F63576 /* body.cpp */; };
-		A74289351F98E36A00F63576 /* entities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289331F98E36A00F63576 /* entities.cpp */; };
-		A742893B1F9A8D0D00F63576 /* component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289391F9A8D0C00F63576 /* component.cpp */; };
 		A74FDDB71F868D730025AFCF /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */; };
 		A7B0D5761F892E33000EC425 /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D5711F892E33000EC425 /* sprite.cpp */; };
 		A7B0D57E1F8AC8BA000EC425 /* delta_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */; };
@@ -41,9 +39,7 @@
 		A742892E1F96614F00F63576 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
 		A74289301F97684F00F63576 /* body.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = body.cpp; sourceTree = "<group>"; };
 		A74289311F97685000F63576 /* body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = body.h; sourceTree = "<group>"; };
-		A74289331F98E36A00F63576 /* entities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = entities.cpp; sourceTree = "<group>"; };
 		A74289341F98E36A00F63576 /* entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entities.h; sourceTree = "<group>"; };
-		A74289391F9A8D0C00F63576 /* component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = component.cpp; sourceTree = "<group>"; };
 		A742893A1F9A8D0D00F63576 /* component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = component.h; sourceTree = "<group>"; };
 		A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		A74FDDCE1F8919820025AFCF /* entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entity.h; sourceTree = "<group>"; };
@@ -105,17 +101,15 @@
 		A7DE42DC1F82443E009621E9 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A7B0D5701F892E33000EC425 /* components */,
-				A74289391F9A8D0C00F63576 /* component.cpp */,
 				A742893A1F9A8D0D00F63576 /* component.h */,
-				A74FDDCE1F8919820025AFCF /* entity.h */,
-				A742892B1F965A1700F63576 /* entity.cpp */,
-				A7DE42DD1F82443E009621E9 /* main.cpp */,
+				A7B0D5701F892E33000EC425 /* components */,
 				A7B0D57C1F8AC8BA000EC425 /* delta_time.cpp */,
 				A7B0D57D1F8AC8BA000EC425 /* delta_time.h */,
-				A709ECE51F829CF1002C3027 /* texture.cpp */,
-				A74289331F98E36A00F63576 /* entities.cpp */,
 				A74289341F98E36A00F63576 /* entities.h */,
+				A742892B1F965A1700F63576 /* entity.cpp */,
+				A74FDDCE1F8919820025AFCF /* entity.h */,
+				A7DE42DD1F82443E009621E9 /* main.cpp */,
+				A709ECE51F829CF1002C3027 /* texture.cpp */,
 				A709ECE61F829CF1002C3027 /* texture.h */,
 				A7B0D57B1F8AB0C4000EC425 /* vector.h */,
 				A7DDD1F21F866EE600D1DEFF /* window.cpp */,
@@ -191,11 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A742892C1F965A1700F63576 /* entity.cpp in Sources */,
-				A74289351F98E36A00F63576 /* entities.cpp in Sources */,
 				A7B0D5761F892E33000EC425 /* sprite.cpp in Sources */,
 				A74289321F97685000F63576 /* body.cpp in Sources */,
 				A742892F1F96614F00F63576 /* input.cpp in Sources */,
-				A742893B1F9A8D0D00F63576 /* component.cpp in Sources */,
 				A7DE42DE1F82443E009621E9 /* main.cpp in Sources */,
 				A7DDD1F41F866EE600D1DEFF /* window.cpp in Sources */,
 				A709ECE71F829CF1002C3027 /* texture.cpp in Sources */,

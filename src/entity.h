@@ -15,14 +15,15 @@ struct Entity : Vector {
   // @TODO: Do I need to define virtual deconstructor?
 
   // @TODO: Store position on entity or a position/transform component? Or on Sprite?
-  void update(double deltaTime);
+  void preUpdate(double deltaTime);
+  virtual void update() {};
   void render(SDL_Renderer* renderer);
 
   // @TODO: Use template rather than overloading.
   void addComponentTest(Body* body);
+
   void addComponent(Input* input);
   void addComponent(Sprite* sprite);
-
 
   unsigned int id;
   char tag; // @TODO: Allow multiple?

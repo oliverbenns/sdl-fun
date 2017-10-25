@@ -39,9 +39,8 @@ int main(int argc, char* args[]) {
   }
 
   Entity* entities[2];
-  entities[0] = createPlayer(window->renderer);
-  entities[1] = createFloor(window->renderer);
-
+  entities[0] = new Player(window->renderer);
+  entities[1] = new Floor(window->renderer);
 
   // Main loop flag
   bool quit = false;
@@ -67,15 +66,14 @@ int main(int argc, char* args[]) {
     // Clear screen
     SDL_RenderClear(window->renderer);
 
-
-
     // Size of array. Although it's a fixed array, it probably won't be in future so keeping this here. Probs make a util.
     int entityCount = sizeof(entities) / sizeof(entities[0]);
 
     for (unsigned int i = 0; i < entityCount; i++) {
       Entity* entity = entities[i];
 
-      entity->update(deltaTime.now);
+      entity->preUpdate(deltaTime.now);
+      entity->update();
       entity->render(window->renderer);
     }
 

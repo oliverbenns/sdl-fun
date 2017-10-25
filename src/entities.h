@@ -8,6 +8,24 @@
 
 struct Entity;
 
-Entity* createPlayer(SDL_Renderer* renderer);
+struct Player : Entity {
+  Player(SDL_Renderer* renderer) : a(5) {
+    this->addComponentTest(new Body());
+    this->addComponent(new Input());
+    this->addComponent(new Sprite(renderer, "player.bmp"));
+      
+      
+  }
+  int a = 3;
+};
 
-Entity* createFloor(SDL_Renderer* renderer);
+struct Floor : Entity {
+  Floor(SDL_Renderer* renderer) {
+    this->addComponentTest(new Body());
+    this->addComponent(new Sprite(renderer, "floor.bmp"));
+
+    this->body->gravity = false;
+    this->x = 0;
+    this->y = 400;
+  }
+};

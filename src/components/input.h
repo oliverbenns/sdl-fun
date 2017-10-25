@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include "component.h"
 
+#include "entity.h"
+
+struct Entity;
+
 struct Input : Component {
   Input();
 
@@ -14,6 +18,7 @@ struct Input : Component {
   const Uint8* down;
   const Uint8* left;
   const Uint8* right;
+  Entity* entity;
 
   private:
     const Uint8* state;

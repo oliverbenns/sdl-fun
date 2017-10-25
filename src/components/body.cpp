@@ -5,7 +5,7 @@ Body::Body() {
   velocity.y = 1;
 };
 
-void Body::update() {
+void Body::update(double deltaTime) {
   if (gravity) {
     entity->x += velocity.x;
     entity->y += velocity.y;

@@ -9,9 +9,10 @@ Sprite::Sprite(SDL_Renderer* renderer, const char * texturePath) {
  // This seems safer as sometimes it appears we get random vals
  rect.x = 0;
  rect.y = 0;
+    
 }
 
-void Sprite::update() {
+void Sprite::update(double deltaTime) {
   // @TODO could I make this reference it instead of reassign each frame?
 
   rect.x = entity->x;
@@ -20,7 +21,7 @@ void Sprite::update() {
 
 // @TODO maybe this should go on the entity instead.
 void Sprite::render(SDL_Renderer* renderer) {
-SDL_RenderCopy(renderer, entity->sprite->texture, NULL, &rect);
+  SDL_RenderCopy(renderer, entity->sprite->texture, NULL, &rect);
 }
 
 // @TODO Destruct and free texture.
