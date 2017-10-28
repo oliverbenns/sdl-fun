@@ -33,4 +33,5 @@ void Entity::addComponent(Sprite* sprite) {
 
 void Entity::render(SDL_Renderer* renderer) {
   sprite->render(renderer);
+  body->render(renderer);
 }
