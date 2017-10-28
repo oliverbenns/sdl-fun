@@ -13,8 +13,6 @@ struct Player : Entity {
     this->addComponent(new Body());
     this->addComponent(new Input());
     this->addComponent(new Sprite(renderer, "player.bmp"));
-
-
   }
 };
 
