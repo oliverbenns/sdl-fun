@@ -14,6 +14,7 @@
 		A74289521FA4EA0300F63576 /* entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289471FA4EA0300F63576 /* entity.cpp */; };
 		A74289531FA4EA0300F63576 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289491FA4EA0300F63576 /* texture.cpp */; };
 		A74289541FA4EA0300F63576 /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742894C1FA4EA0300F63576 /* window.cpp */; };
+		A74289571FA5177C00F63576 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289561FA5177C00F63576 /* game.cpp */; };
 		A74FDDB71F868D730025AFCF /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */; };
 		A7DE42DE1F82443E009621E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DE42DD1F82443E009621E9 /* main.cpp */; };
 		A7DE42E61F8244D4009621E9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DE42E51F8244D4009621E9 /* SDL2.framework */; };
@@ -49,6 +50,8 @@
 		A742894B1FA4EA0300F63576 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 		A742894C1FA4EA0300F63576 /* window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = "<group>"; };
 		A742894D1FA4EA0300F63576 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
+		A74289551FA5177C00F63576 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
+		A74289561FA5177C00F63576 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
 		A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		A7DE42DA1F82443E009621E9 /* sdl-fun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdl-fun"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DE42DD1F82443E009621E9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 				A74289461FA4EA0300F63576 /* delta_time.h */,
 				A74289471FA4EA0300F63576 /* entity.cpp */,
 				A74289481FA4EA0300F63576 /* entity.h */,
+				A74289561FA5177C00F63576 /* game.cpp */,
+				A74289551FA5177C00F63576 /* game.h */,
 				A74289491FA4EA0300F63576 /* texture.cpp */,
 				A742894A1FA4EA0300F63576 /* texture.h */,
 				A742894B1FA4EA0300F63576 /* vector.h */,
@@ -194,6 +199,7 @@
 			files = (
 				A742894F1FA4EA0300F63576 /* input.cpp in Sources */,
 				A74289501FA4EA0300F63576 /* sprite.cpp in Sources */,
+				A74289571FA5177C00F63576 /* game.cpp in Sources */,
 				A74289541FA4EA0300F63576 /* window.cpp in Sources */,
 				A742894E1FA4EA0300F63576 /* body.cpp in Sources */,
 				A7DE42DE1F82443E009621E9 /* main.cpp in Sources */,

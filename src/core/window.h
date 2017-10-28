@@ -3,6 +3,7 @@
 class Window {
   public:
     Window(int width, int height);
+    bool init();
     virtual ~Window();
     void close();
 
