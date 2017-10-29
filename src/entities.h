@@ -22,7 +22,8 @@ struct Floor : Entity {
     this->addComponent(new Sprite(renderer, "floor.bmp"));
 
     this->body->gravity = false;
-    this->x = 0;
-    this->y = 400;
+    this->x = 300;
+    this->y = 200;
+
   }
 };

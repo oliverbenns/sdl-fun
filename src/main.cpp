@@ -18,6 +18,8 @@ int main(int argc, char* args[]) {
   entities[0] = new Player(game.window->renderer);
   entities[1] = new Floor(game.window->renderer);
 
+  entities[0]->body->addCollider(entities[1]);
+
   DeltaTime deltaTime;
 
   while(game.running) {
@@ -25,7 +27,7 @@ int main(int argc, char* args[]) {
 
     deltaTime.update();
 
-    printf("deltaTime %f\n", deltaTime.now);
+    // printf("deltaTime %f\n", deltaTime.now);
 
     // Clear screen
     SDL_RenderClear(game.window->renderer);

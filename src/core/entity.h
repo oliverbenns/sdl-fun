@@ -29,8 +29,8 @@ struct Entity : Vector {
   bool active;
 
   // Could we make this a rect like SDL_RECT?
-  int width;
-  int height;
+  // int width;
+  // int height;
 
   Body* body = nullptr;
   Input* input = nullptr;

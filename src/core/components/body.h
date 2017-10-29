@@ -12,11 +12,12 @@ struct Body : Component {
 
   void update(double deltaTime);
   void render(SDL_Renderer* renderer);
-  bool checkCollision();
+  void addCollider(Entity* entity);
 
   bool gravity = true;
   Vector velocity;
   Entity* entity;
+  Entity* collider = nullptr;
   int width;
   int height;
   bool debug = true;
