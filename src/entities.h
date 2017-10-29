@@ -24,6 +24,5 @@ struct Floor : Entity {
     this->body->gravity = false;
     this->x = 300;
     this->y = 200;
-
   }
 };

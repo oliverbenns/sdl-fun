@@ -1,6 +1,6 @@
 #include "entity.h"
 
-Entity::Entity() {
+Entity::Entity() : Vector(0, 0) {
   // height = sprite->rect.h;
   // width = sprite->rect.w;
 }
