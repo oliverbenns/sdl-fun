@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include "game.h"
 #include "delta_time.h"
-#include "entity.h"
-#include "entities.h"
+#include "scene.h"
+#include "level_1.h"
 
 int main(int argc, char* args[]) {
   Game game;
@@ -14,11 +14,10 @@ int main(int argc, char* args[]) {
     return -1;
   }
 
-  Entity* entities[2];
-  entities[0] = new Player(game.window->renderer);
-  entities[1] = new Floor(game.window->renderer);
+  Scene* level1 = new Level1(game.window->renderer);
 
-  entities[0]->body->addCollider(entities[1]);
+  game.sceneManager.add(level1);
+  game.sceneManager.activate(2);
 
   DeltaTime deltaTime;
 
@@ -32,16 +31,8 @@ int main(int argc, char* args[]) {
     // Clear screen
     SDL_RenderClear(game.window->renderer);
 
-    // Size of array. Although it's a fixed array, it probably won't be in future so keeping this here. Probs make a util.
-    int entityCount = sizeof(entities) / sizeof(entities[0]);
-
-    for (unsigned int i = 0; i < entityCount; i++) {
-      Entity* entity = entities[i];
-
-      entity->preUpdate(deltaTime.now);
-      entity->update(deltaTime.now);
-      entity->render(game.window->renderer);
-    }
+    game.sceneManager.active->update(deltaTime.now);
+    game.sceneManager.active->render(game.window->renderer);
 
     // Update screen
     SDL_RenderPresent(game.window->renderer);

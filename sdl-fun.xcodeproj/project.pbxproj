@@ -15,6 +15,8 @@
 		A74289531FA4EA0300F63576 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289491FA4EA0300F63576 /* texture.cpp */; };
 		A74289541FA4EA0300F63576 /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742894C1FA4EA0300F63576 /* window.cpp */; };
 		A74289571FA5177C00F63576 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289561FA5177C00F63576 /* game.cpp */; };
+		A742895D1FA89EFF00F63576 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A74289591FA89EFF00F63576 /* scene.cpp */; };
+		A742895E1FA89EFF00F63576 /* scene_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A742895B1FA89EFF00F63576 /* scene_manager.cpp */; };
 		A74FDDB71F868D730025AFCF /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */; };
 		A7DE42DE1F82443E009621E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DE42DD1F82443E009621E9 /* main.cpp */; };
 		A7DE42E61F8244D4009621E9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DE42E51F8244D4009621E9 /* SDL2.framework */; };
@@ -52,6 +54,11 @@
 		A742894D1FA4EA0300F63576 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
 		A74289551FA5177C00F63576 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
 		A74289561FA5177C00F63576 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		A74289591FA89EFF00F63576 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
+		A742895A1FA89EFF00F63576 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
+		A742895B1FA89EFF00F63576 /* scene_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene_manager.cpp; sourceTree = "<group>"; };
+		A742895C1FA89EFF00F63576 /* scene_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene_manager.h; sourceTree = "<group>"; };
+		A74289611FA8CE6A00F63576 /* level_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = level_1.h; sourceTree = "<group>"; };
 		A74FDDB61F868D730025AFCF /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		A7DE42DA1F82443E009621E9 /* sdl-fun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdl-fun"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DE42DD1F82443E009621E9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 			children = (
 				A742893D1FA4EA0300F63576 /* component.h */,
 				A742893E1FA4EA0300F63576 /* components */,
+				A74289581FA89EFF00F63576 /* scene */,
 				A74289451FA4EA0300F63576 /* delta_time.cpp */,
 				A74289461FA4EA0300F63576 /* delta_time.h */,
 				A74289471FA4EA0300F63576 /* entity.cpp */,
@@ -104,6 +112,17 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		A74289581FA89EFF00F63576 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				A74289591FA89EFF00F63576 /* scene.cpp */,
+				A742895A1FA89EFF00F63576 /* scene.h */,
+				A742895B1FA89EFF00F63576 /* scene_manager.cpp */,
+				A742895C1FA89EFF00F63576 /* scene_manager.h */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
 		A7DE42D11F82443E009621E9 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +146,7 @@
 				A742893C1FA4EA0300F63576 /* core */,
 				A74289341F98E36A00F63576 /* entities.h */,
 				A7DE42DD1F82443E009621E9 /* main.cpp */,
+				A74289611FA8CE6A00F63576 /* level_1.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -197,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A742895D1FA89EFF00F63576 /* scene.cpp in Sources */,
 				A742894F1FA4EA0300F63576 /* input.cpp in Sources */,
 				A74289501FA4EA0300F63576 /* sprite.cpp in Sources */,
 				A74289571FA5177C00F63576 /* game.cpp in Sources */,
@@ -204,6 +225,7 @@
 				A742894E1FA4EA0300F63576 /* body.cpp in Sources */,
 				A7DE42DE1F82443E009621E9 /* main.cpp in Sources */,
 				A74289521FA4EA0300F63576 /* entity.cpp in Sources */,
+				A742895E1FA89EFF00F63576 /* scene_manager.cpp in Sources */,
 				A74289511FA4EA0300F63576 /* delta_time.cpp in Sources */,
 				A74289531FA4EA0300F63576 /* texture.cpp in Sources */,
 			);

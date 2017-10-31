@@ -17,12 +17,12 @@ struct Player : Entity {
 };
 
 struct Floor : Entity {
-  Floor(SDL_Renderer* renderer) {
+  Floor(SDL_Renderer* renderer, int x, int y) {
     this->addComponent(new Body(this));
     this->addComponent(new Sprite(this, renderer, "floor.bmp"));
 
     this->body->gravity = false;
-    this->x = 300;
-    this->y = 200;
+    this->x = x;
+    this->y = y;
   }
 };
