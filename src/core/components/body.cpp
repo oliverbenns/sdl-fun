@@ -1,4 +1,5 @@
 #include "body.h"
+#include "entity.h"
 
 enum Vertices {
   TOP_LEFT,
@@ -8,21 +9,21 @@ enum Vertices {
   TOTAL_VERTICES,
 };
 
-Body::Body() {
+Body::Body(Entity* entity) : Component(entity) {
   // Gravity!
   velocity.y = 1;
   width = 50;
   height = 50;
 };
 
-void Body::update(double deltaTime) {
-  // @TODO: Figure out a way to create these at creation time and prevent reassignment on each frame.
-  // Currently the entity hasn't been constructed yet from the constructor here and is assigned later.
-  vertices[0] = Vector(entity->x, entity->y);
-  vertices[1] = Vector(entity->x + width, entity->y);
-  vertices[2] = Vector(entity->x + width, entity->y + height);
-  vertices[3] = Vector(entity->x, entity->y + height);
+void Body::preUpdate(double deltaTime) {
+  vertices[TOP_LEFT] = Vector(entity->x, entity->y);
+  vertices[TOP_RIGHT] = Vector(entity->x + width, entity->y);
+  vertices[BOTTOM_RIGHT] = Vector(entity->x + width, entity->y + height);
+  vertices[BOTTOM_LEFT] = Vector(entity->x, entity->y + height);
+}
 
+void Body::update(double deltaTime) {
   if (gravity) {
     entity->x += velocity.x;
     entity->y += velocity.y;
@@ -40,15 +41,12 @@ void Body::update(double deltaTime) {
 };
 
 // AABB
-bool Body::isCollidingWith(Entity* entity) {
-  Vector topLeftB(entity->x, entity->y);
-  Vector bottomRightB(entity->x + entity->body->width, entity->y + entity->body->height);
-
+bool Body::isCollidingWith(Entity* collider) {
   return !(
-    vertices[BOTTOM_RIGHT].x < topLeftB.x ||
-    vertices[TOP_LEFT].x > bottomRightB.x ||
-    vertices[TOP_LEFT].y > bottomRightB.y ||
-    vertices[BOTTOM_RIGHT].y < topLeftB.y
+    vertices[BOTTOM_RIGHT].x < collider->body->vertices[TOP_LEFT].x ||
+    vertices[TOP_LEFT].x > collider->body->vertices[BOTTOM_RIGHT].x ||
+    vertices[TOP_LEFT].y > collider->body->vertices[BOTTOM_RIGHT].y ||
+    vertices[BOTTOM_RIGHT].y < collider->body->vertices[TOP_LEFT].y
   );
 };
 

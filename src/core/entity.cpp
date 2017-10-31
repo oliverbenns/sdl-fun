@@ -1,4 +1,7 @@
 #include "entity.h"
+#include "body.h"
+#include "input.h"
+#include "sprite.h"
 
 Entity::Entity() : Vector(0, 0) {
   // height = sprite->rect.h;
@@ -6,6 +9,10 @@ Entity::Entity() : Vector(0, 0) {
 }
 
 void Entity::preUpdate(double deltaTime) {
+  body->preUpdate(deltaTime);
+}
+
+void Entity::update(double deltaTime) {
   body->update(deltaTime);
 
   if (input) {
@@ -17,17 +24,14 @@ void Entity::preUpdate(double deltaTime) {
 }
 
 void Entity::addComponent(Body* body) {
-  body->entity = this;
   this->body = body;
 };
 
 void Entity::addComponent(Input* input) {
-  input->entity = this;
   this->input = input;
 };
 
 void Entity::addComponent(Sprite* sprite) {
-  sprite->entity = this;
   this->sprite = sprite;
 };
 

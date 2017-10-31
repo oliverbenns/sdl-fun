@@ -1,6 +1,7 @@
 #include "sprite.h"
+#include "entity.h"
 
-Sprite::Sprite(SDL_Renderer* renderer, const char * texturePath) {
+Sprite::Sprite(Entity* entity, SDL_Renderer* renderer, const char * texturePath) : Component(entity) {
  texture = loadTexture(renderer, texturePath);
 
  // Set rewidth and height to the same dimensions as the texture
@@ -9,7 +10,7 @@ Sprite::Sprite(SDL_Renderer* renderer, const char * texturePath) {
  // This seems safer as sometimes it appears we get random vals
  rect.x = 0;
  rect.y = 0;
-    
+
 }
 
 void Sprite::update(double deltaTime) {

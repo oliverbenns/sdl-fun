@@ -39,7 +39,7 @@ int main(int argc, char* args[]) {
       Entity* entity = entities[i];
 
       entity->preUpdate(deltaTime.now);
-      entity->update();
+      entity->update(deltaTime.now);
       entity->render(game.window->renderer);
     }
 

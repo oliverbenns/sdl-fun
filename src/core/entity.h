@@ -1,9 +1,6 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-#include "body.h"
-#include "input.h"
-#include "sprite.h"
 #include "vector.h"
 
 struct Body;
@@ -16,7 +13,7 @@ struct Entity : Vector {
 
   // @TODO: Store position on entity or a position/transform component? Or on Sprite?
   void preUpdate(double deltaTime);
-  virtual void update() {};
+  void update(double deltaTime);
   void render(SDL_Renderer* renderer);
 
   // @TODO: Use template rather than overloading.
