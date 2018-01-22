@@ -5,11 +5,14 @@
 #include "entity.h"
 
 struct Scene {
-  void addEntity(Entity* entity, int index);
+  Scene();
+  Scene(int length);
+  void addEntity(Entity* entity);
+  void removeEntity(Entity* entity);
 
   void update(double deltaTime);
   void render(SDL_Renderer* renderer);
 
-  Entity* entities[3];
-  int id;
+  Entity *entities;
+  unsigned int entityCount;
 };
